@@ -1,0 +1,15 @@
+---
+name: Build CCS project
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  test_ccs_build:
+  name: Test CCS Build
+  steps:
+    - name: CCS build action step
+      uses: grahame-student/ccs_build@0.0.2
+      with:
+        project-name: test
+        build-configuration: Debug
