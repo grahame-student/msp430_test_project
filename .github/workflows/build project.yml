@@ -16,5 +16,6 @@ jobs:
       - name: CCS build action step
         uses: grahame-student/ccs_build@v0.0.2
         with:
-          project-name: test
+          project-path: src
+          project-name: msp430_test_project
           build-configuration: Debug
