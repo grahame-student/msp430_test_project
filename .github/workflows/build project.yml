@@ -14,8 +14,8 @@ jobs:
         with:
           path: src
       - name: CCS build action step
-        uses: grahame-student/ccs_build@v0.0.14
+        uses: grahame-student/ccs_build@v0.0.15-a
         with:
-          project-path: src
+          project-path: workdir
           project-name: msp430_test_project
           build-configuration: Debug
