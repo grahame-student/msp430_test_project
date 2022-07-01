@@ -1,1 +1,0 @@
-"./src/blink.obj" "./src/delay.obj" "./src/drivers/gpio_driver.obj" "./src/drivers/watchdog_driver.obj" "../lnk_msp430fr2033.cmd" -llibc.a 
