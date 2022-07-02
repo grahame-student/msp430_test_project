@@ -14,7 +14,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        
       - name: CCS build action step
         uses: grahame-student/ccs_build@v0.0.20
         with:
           build-configuration: Debug
+
+      - name: Run unit tests
+        uses: grahame-student/gtest-action@v0.0.1
+        with:
+          test-path: 'src/tests'
