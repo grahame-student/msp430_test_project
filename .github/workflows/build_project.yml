@@ -21,6 +21,6 @@ jobs:
           build-configuration: Debug
 
       - name: Run unit tests
-        uses: grahame-student/gtest_action@v0.0.1
+        uses: grahame-student/gtest_action@v0.0.2
         with:
           test-path: 'src/tests'
