@@ -28,7 +28,7 @@ jobs:
       - name: Generate coverage report        
         uses: danielpalme/ReportGenerator-GitHub-Action@5.1.9
         with:
-          reports: 'src/tests/gcovr-report.xml'
+          reports: 'gcovr-report.xml'
           targetdir: .
 
       - name: Upload coverage report artifact
