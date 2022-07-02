@@ -90,6 +90,7 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry excluding="src/tests" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/tests/drivers"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
