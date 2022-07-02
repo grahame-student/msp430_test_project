@@ -24,3 +24,16 @@ jobs:
         uses: grahame-student/gtest_action@v0.0.3-alpha9
         with:
           test-path: 'src/tests'
+
+      - name: Generate coverage report        
+        uses: danielpalme/ReportGenerator-GitHub-Action@5.1.9
+        with:
+          reports: gcovr-report.xml
+          targetdir: .
+
+      - name: Upload coverage report artifact
+        if: always()
+        uses: actions/upload-artifact@v2.2.3
+        with:
+          name: index.html 
+          path: .
