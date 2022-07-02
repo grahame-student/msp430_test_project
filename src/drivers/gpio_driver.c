@@ -1,4 +1,6 @@
+#ifndef UNIT_TESTING
 #include <msp430.h>
+#endif
 
 #include "gpio_driver.h"
 
