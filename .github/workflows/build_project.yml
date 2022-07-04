@@ -25,15 +25,18 @@ jobs:
         with:
           test-path: 'src/tests'
 
+      - name: Create report directory
+        run: mkdir reports
+
       - name: Generate coverage report        
         uses: danielpalme/ReportGenerator-GitHub-Action@5.1.9
         with:
-          reports: 'gcovr-report.xml'
-          targetdir: .
+          reports: '*-report.xml'
+          targetdir: reports
 
       - name: Upload coverage report artifact
         if: always()
         uses: actions/upload-artifact@v2.2.3
         with:
           name: 'Coverage report'
-          path: .
+          path: reports
