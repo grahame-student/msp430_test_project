@@ -32,6 +32,7 @@ jobs:
         uses: danielpalme/ReportGenerator-GitHub-Action@5.1.9
         with:
           reports: '*-report.xml'
+          reporttypes: 'HtmlInline'
           targetdir: reports
 
       - name: Upload coverage report artifact
