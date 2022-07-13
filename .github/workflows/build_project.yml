@@ -13,7 +13,7 @@ jobs:
     name: Test CCS Build
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.0.2
         
       - name: CCS build action step
         uses: grahame-student/ccs_build@v0.0.20
@@ -21,19 +21,21 @@ jobs:
           build-configuration: Debug
 
       - name: Run unit tests
-        uses: grahame-student/gtest_action@v0.0.3
+        uses: grahame-student/gtest_action@v0.0.4-alpha8
         with:
-          test-path: 'src/tests'
+          test-path: 'src/tests,src/other_tests'
 
       - name: Generate coverage report        
         uses: danielpalme/ReportGenerator-GitHub-Action@5.1.9
         with:
-          reports: 'gcovr-report.xml'
-          targetdir: .
+          reports: '*-report.xml'
+          targetdir: reports
 
       - name: Upload coverage report artifact
         if: always()
         uses: actions/upload-artifact@v2.2.3
         with:
           name: 'Coverage report'
-          path: .
+          path: |
+            src
+            reports
